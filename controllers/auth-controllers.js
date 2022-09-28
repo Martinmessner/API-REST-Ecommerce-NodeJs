@@ -1,5 +1,5 @@
 import { User } from "../models/Users.js";
-import jwt  from "jsonwebtoken";
+import { generateToken } from "../utilities/generateToken.js";
 
 export const register = async (req, res) => {
     const {email, password} = req.body;
@@ -33,11 +33,21 @@ export const login =  async (req, res) => {
            return res.status(403).json({error: "Contraseña incorrecta"});
         
         // Generar JSON Web Token
-        const token = jwt.sign({userid: user._id}, process.env.JWT_SECRET)
+        const {token, expiresIn} = generateToken(user.id)
 
-        return res.json({token});
+        return res.json({token, expiresIn});
     } catch (error) {
         console.log(error)
         return res.status(500).json({error: "Error de servidor"});
     }
+};
+
+export const infoUser = async (req,res) => {
+    try {
+        const user = await User.findById(req.uid).lean()
+         return res.json({ email: user.email, uid: user.uid });
+    } catch (error) {
+        return res.status(500).json({error: "Error de servidor"});
+    }
+   
 };

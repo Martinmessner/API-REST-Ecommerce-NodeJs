@@ -1,7 +1,10 @@
 import  { Router}  from "express";
-import { login, register } from "../controllers/auth-controllers.js";
+import { infoUser, login, register } from "../controllers/auth-controllers.js";
 import {body} from "express-validator";
 import { validationResultExpress } from "../middleware/autentificacion-express-validator.js";
+import { requireToken } from "../middleware/requireToken.js";
+import path from 'path';
+const __dirname = path.resolve();
 
 const router = Router()
 
@@ -32,5 +35,10 @@ body("password", "Formato de contraseña incorrecto").custom((value, {req}) => {
 validationResultExpress,
 register
 );
+
+router.get("/protected",requireToken, infoUser)
+
+
+
 
 export default router
