@@ -1,0 +1,72 @@
+[
+    {
+        "precio": 1200,
+        "id": 1,
+        "title": "Taza",
+        "img": "./images/1.jpg",
+        "cantidad": 1
+    },
+    {
+        "precio": 900,
+        "id": 2,
+        "title": "Mate",
+        "img": "./images/2.jpg",
+        "cantidad": 1
+    },
+    {
+        "precio": 1100,
+        "id": 3,
+        "title": "Jarro Termico",
+        "img": "./images/3.jpg",
+        "cantidad": 1
+    },
+    {
+        "precio": 900,
+        "id": 4,
+        "title": "Mate",
+        "img": "./images/4.jpg",
+        "cantidad": 1
+    },
+    {
+        "precio": 1200,
+        "id": 5,
+        "title": "Taza",
+        "img": "./images/5.jpg",
+        "cantidad": 1
+    },
+    {
+        "precio": 1200,
+        "id": 6,
+        "title": "Taza",
+        "img": "./images/6.jpg",
+        "cantidad": 1
+    },
+    {
+        "precio": 1200,
+        "id": 7,
+        "title": "Taza",
+        "img": "./images/1.jpg",
+        "cantidad": 1
+    },
+    {
+        "precio": 1200,
+        "id": 8,
+        "title": "Taza",
+        "img": "./images/1.jpg",
+        "cantidad": 1
+    },
+    {
+        "precio": 1200,
+        "id": 9,
+        "title": "Taza",
+        "img": "./images/1.jpg",
+        "cantidad": 1
+    },
+    {
+        "precio": 1200,
+        "id": 10,
+        "title": "Taza",
+        "img": "./images/1.jpg",
+        "cantidad": 1
+    }
+]

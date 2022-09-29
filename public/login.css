@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: indigo;
+    color: #dddddd;
+}
+
+.contenedor__main {
+    padding: 20px;
+   
+}
+
+.contenedor__form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.form__input {
+    margin: 10px;
+    height: 35px;
+}

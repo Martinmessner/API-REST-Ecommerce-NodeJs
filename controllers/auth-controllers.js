@@ -1,14 +1,36 @@
 import { User } from "../models/Users.js";
-import { generateToken } from "../utilities/generateToken.js";
+import passport from "passport"
 
-export const register = async (req, res) => {
+export const renderIndex = (req,res) => {
+    res.render("index")
+};
+        // Login del Metodo GET
+export const renderLogin = (req,res) => {
+    res.render("login")
+};
+
+     // El Login pero del METODO POST
+export const login = passport.authenticate("local", {
+    failureRedirect: "/login",
+    successRedirect: "/",
+    failureFlash: false,
+    
+  });
+
+      // Registro del Metodo GET
+export const renderRegistro = (req,res) => {
+    res.render("registro")
+};
+
+
+       // El registro pero del METODO POST
+export const registro = async (req, res) => {
     const {email, password} = req.body;
     try {
         const user = new User({email, password});
         await user.save();
 
-        // JWT TOKEN PROXIMO PASO
-        return res.json({25: true})
+        return res.render("login")
     } catch (error) {
         console.log(error);
         // Alternativa por defecto mongoose
@@ -19,35 +41,7 @@ export const register = async (req, res) => {
     }
    
 };
-
-export const login =  async (req, res) => {
-    try {
-        const {email, password } = req.body;
-
-        let user = await User.findOne({ email });
-        if (!user) 
-        return res.status(403).json({error: "No existe este usuario"});
-
-        const respuestaPassword = await user.comparePassword(password)
-        if (!respuestaPassword)
-           return res.status(403).json({error: "Contraseña incorrecta"});
-        
-        // Generar JSON Web Token
-        const {token, expiresIn} = generateToken(user.id)
-
-        return res.json({token, expiresIn});
-    } catch (error) {
-        console.log(error)
-        return res.status(500).json({error: "Error de servidor"});
-    }
-};
-
-export const infoUser = async (req,res) => {
-    try {
-        const user = await User.findById(req.uid).lean()
-         return res.json({ email: user.email, uid: user.uid });
-    } catch (error) {
-        return res.status(500).json({error: "Error de servidor"});
-    }
-   
-};
+// Cerrar Sesion
+export const logout = async (req,res) => {
+    res.send("logout")
+}
