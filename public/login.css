@@ -5,21 +5,55 @@
 }
 
 body {
-    background-color: indigo;
+    
+       
+        background: radial-gradient(circle, #dddddd, #55256B);
     color: #dddddd;
 }
 
 .contenedor__main {
-    padding: 20px;
+    padding: 3px;
    
+}
+
+.imagen {
+    height: 150px;
+    transform: translateY(10px);
+    width: 100%;
+    object-fit: contain;
+    
+}
+
+h1 {
+   justify-content: center;
+   display: flex;
+   font-size: 3em;
+   color: indigo;
+   font-family:  ui-monospace;
+   font-weight: 800;
+   letter-spacing: 2px;
 }
 
 .contenedor__form {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
+    margin: auto;
+    background-color: indigo;
+    height: 15em;
+    padding: 35px;
+
 }
 .form__input {
     margin: 10px;
     height: 35px;
+    font-weight: 700;
+}
+input[type="submit"] {
+    cursor: pointer;
+    font-weight: 700;
+}
+input[type="submit"]:hover {
+    background-color: indigo;
+    color: #dddddd;
 }
