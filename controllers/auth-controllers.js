@@ -12,7 +12,7 @@ export const renderLogin = (req,res) => {
      // El Login pero del METODO POST
 export const login = passport.authenticate("local", {
     failureRedirect: "/login",
-    successRedirect: "/ñ",
+    successRedirect: "/",
     failureFlash: false,
     
   });

@@ -1,7 +1,5 @@
 import {busquedaFiltrada, menuHamburguesa,mostrarCategorias} from "./funciones.js"
-
 const lista = document.getElementById("xd")
-const fragment = document.createDocumentFragment();
 let carrito = [];
 const carritoIcono = document.querySelector(".carrito")
 const modalContenedor = document.querySelector(".modal__contenedor")
@@ -19,10 +17,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     menuHamburguesa();
     mostrarCategorias();
     busquedaFiltrada(".buscar",".contenedor__fotoo");
-    if (localStorage.getItem('carrito')){
-        carrito = JSON.parse(localStorage.getItem('carrito'))
-        actualizarCarrito()
-    }
+   
     
     })
 
@@ -120,7 +115,7 @@ function sumarPrecioTotal() {
 
 sumarPrecioTotal()
 contadorCarritoActualizado()
-                localStorage.setItem('carrito', JSON.stringify(carrito))
+               
  }
 
                  function modalContenedorr() {
@@ -141,7 +136,7 @@ function vaciarCarritoCompleto() {
     vaciarCarrito.addEventListener("click", () => {
     carrito = [];
     actualizarCarrito();
-    localStorage.setItem('carrito', JSON.stringify(carrito))
+   
 })
 }
 

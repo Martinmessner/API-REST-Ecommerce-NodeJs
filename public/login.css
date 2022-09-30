@@ -7,7 +7,7 @@
 body {
     
        
-        background: radial-gradient(circle, #dddddd, #55256B);
+     background: radial-gradient(circle, #dddddd, #55256B);
     color: #dddddd;
 }
 
@@ -23,7 +23,21 @@ body {
     object-fit: contain;
     
 }
-
+.form__registro {
+    display: flex;
+    margin: auto;
+    padding: 8px;
+    font-weight: 700;
+}
+button {
+    background-color: #dddddd;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+button:hover {
+    background-color: indigo;
+    color: #dddddd;
+}
 h1 {
    justify-content: center;
    display: flex;
@@ -39,8 +53,8 @@ h1 {
     flex-direction: column;
     width: 40%;
     margin: auto;
-    background-color: indigo;
-    height: 15em;
+    background-color: #55256B;
+    height: 19em;
     padding: 35px;
 
 }

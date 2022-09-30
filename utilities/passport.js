@@ -12,11 +12,9 @@ passport.use(
     async (email, password, done) => {
       // Match Email's User
       const user = await User.findOne({ email: email });
-
       if (!user) {
         return done(null, false, { message: "No se encontro un usuario." });
       }
-
       // Match Password's User
       const isMatch = await user.comparePassword(password);
       if (!isMatch)
