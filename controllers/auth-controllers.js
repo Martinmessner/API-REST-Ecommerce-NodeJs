@@ -42,6 +42,10 @@ export const registro = async (req, res) => {
    
 };
 // Cerrar Sesion
-export const logout = async (req,res) => {
-    res.send("logout")
-}
+export const logout = async (req,res, next) => {
+    await req.logout((err) => {
+        if (err) return next(err);
+        req.flash("success_msg", "You are logged out now.");
+        res.redirect("/login");
+      });
+    };
