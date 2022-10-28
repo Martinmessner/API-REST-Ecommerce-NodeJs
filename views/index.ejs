@@ -8,6 +8,7 @@
         content="Empresa PM 25, Tecnologia, Software, Hardware, Arreglos de Camaras, Redes, Backups, Tecnico de Pc, Arreglos de Pc">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"  href="/views/icon-arg.ico">
     <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
         integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,59 +38,29 @@
 
     <nav class="contenedor__headerr">
         <ul class="contenedor__ul">
-            <li id="categorias" class="contenedor__header--lista"><a class="contenedor__header--link"
-                    href="#">Categorias</a><i class="arrow fa-sharp fa-solid fa-arrow-down"></i>
-                <ul class="contenedor__arrow">
-                    <li class="contenedor__arrow--li"><a class="contenedor__arrow--li--link" href="#">Mates</a>
-                    </li>
-                    <li class="contenedor__arrow--li"><a class="contenedor__arrow--li--link" href="#">Tazas</a></li>
-                    <li class="contenedor__arrow--li"><a class="contenedor__arrow--li--link" href="#">Jarros
-                            Termicos</a></li>
-                    <li class="contenedor__arrow--li"><a class="contenedor__arrow--li--link" href="#">Tazas</a></li>
-                    <li class="contenedor__arrow--li"><a class="contenedor__arrow--li--link" href="#">Tazas</a></li>
-                    <li class="contenedor__arrow--li"><a class="contenedor__arrow--li--link" href="#">Tazas</a></li>
-                    <li class="contenedor__arrow--li"><a class="contenedor__arrow--li--link" href="#">Tazas</a></li>
-                    <li class="contenedor__arrow--li"><a class="contenedor__arrow--li--link" href="#">Tazas</a></li>
-
-                </ul>
-            </li>
-
-            <li class="contenedor__header--lista"><a class="contenedor__header--link" href="#">Contacto</a></li>
-            <li class="contenedor__header--lista"><a class="contenedor__header--link" href="#">Mis compras</a></li>
-
+            <li class="contenedor__header--lista"><a class="contenedor__header--link" href="https://www.instagram.com/efectosublimados/" target="_blank">Contacto</a></li>
             <li class="contenedor__header--lista"><a class="contenedor__header--link carrito" id="otroDiv" href="#">
-                <i class="carrito fa-solid fa-cart-plus"></i></a></li><span class="contador__carrito" id="contadorCarrito">0</span>
+             <i class="carrito fa-solid fa-cart-plus"></i></a></li><span class="contador__carrito" id="contadorCarrito">0</span>
 
            <li class="contenedor__header--lista"><a class="contenedor__header--link" href="/logout">
             <i class="fa-solid fa-right-from-bracket"></i></a></li>
         </ul>
-
-       
-
     </nav>
 
     <h2 class="contenedor__novedades"> Nuevas Novedades Para vos!</h2>
 
-    <main id="xd" class="contenedor__foto">
-
-
-
-    </main>
+    <main id="xd" class="contenedor__foto"></main>
 
     <div class="modal__contenedor">
         <div class="modal__carrito">
             <h2>Carrito</h2>
             <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-            <div id="carrito-contenedor">
-
-            </div>
+            <div id="carrito-contenedor"> </div>
             <p class="precio__producto">Precio total: $<span id="precioTotal">0</span></p>
             <button id="vaciar-carrito" class="boton__agregar">Vaciar carrito</button>
             <button id="comprarDelCarrito" class="boton__comprar">Comprar</button>
         </div>
     </div>
-
-
 
 </body>
 <script defer src="comercio.js" type="module"></script>
