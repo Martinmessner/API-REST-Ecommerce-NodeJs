@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "vercel-build": "node ./build.js"
   },
   "keywords": [],
   "author": "",
@@ -24,9 +25,11 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.0",
     "passport": "^0.6.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "vercel": "^28.4.12"
   },
   "devDependencies": {
+    "@vercel/node": "^2.5.26",
     "nodemon": "^2.0.19"
   }
 }
