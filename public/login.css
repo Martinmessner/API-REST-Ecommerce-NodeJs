@@ -71,3 +71,10 @@ input[type="submit"]:hover {
     background-color: indigo;
     color: #dddddd;
 }
+
+@media (max-width: 600px) { 
+    .contenedor__form {
+        width: 100%;
+    }
+
+}
